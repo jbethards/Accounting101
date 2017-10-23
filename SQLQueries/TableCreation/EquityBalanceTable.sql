@@ -1,0 +1,115 @@
+--USE LedgerApplication
+--GO
+--CREATE TABLE OwnersWithdrawelBalance(
+--OwnersWithdrawelBalanceID int,
+--LedgerEquityID int,
+--OwnersWithdrawelBalance int
+--CONSTRAINT PK_EquityOwnersWithdrawelBalance Primary Key nonclustered(OwnersWithdrawelBalanceID)
+--CONSTRAINT FK_EquityOwnersWithdrawelBalance Foreign Key(LedgerEquityID)
+--REFERENCES [dbo].[LedgerEquityAccounts](LiabilityEquityID))
+--SELECT *
+--FROM OwnersWithdrawelBalance
+--Constraint FK_EquityOwnersEquityBalance Foreign Key(LedgerEquityID)
+--REFERENCES [dbo].[LedgerEquityAccounts](LiabilityEquityID))
+--CREATE TABLE EquityOwnersEquityBalance(
+--OwnersEquityBalanceID int,
+--LedgerEquityID int,
+--OwnersEquityBalance int
+--CONSTRAINT PK_EquityOwnersEquityBalance Primary Key nonclustered(OwnersEquityBalanceID)
+--Constraint FK_EquityOwnersEquityBalance Foreign Key(LedgerEquityID)
+--REFERENCES [dbo].[LedgerEquityAccounts](LiabilityEquityID))
+--SELECT *
+--FROM EquityOwnersEquityBalance
+
+--Create Table PropertyBalance(
+--PropertyBalanceID int,
+--AssetAccountID int,
+--PropertyBalance int
+--Constraint PK_PropertyBalanceID Primary key nonclustered (PropertyBalanceID)
+--Constraint FK_PropertyBalanceAssetAccountID Foreign Key(AssetAccountID)
+--References LedgerAssetAccounts(AssetAccountID));
+--SELECT *
+--FROM PropertyBalanc
+--USE LedgerApplication
+--GO
+--Create Table LiabilitesSalariesPayableBalance(
+--SalariesPayableBalanceID int,
+--LedgerLiabilitesID int,
+--SalariesPayableBalance int
+--CONSTRAINT PK_LiabilitiesSalariesPayableBalance Primary Key NonClustered (SalariesPayableBalanceID)
+--Constraint FK_LiabilitiesSalariesPayableBalance Foreign Key(LedgerLiabilitesID)
+--References [dbo].[LedgerLiabilityAccounts] ([LiabilityAccountID]))
+--SELECT *
+--FROM LiabilitesSalariesPayableBalance
+--Create TABLE LiabilitiesRentPayableBalance(
+--RentPayableBalanceID int,
+--LedgerLiabilitiesID int,
+--RentPayableBalance int
+--Constraint PK_LiabilitiesRentPayableBalance Primary Key nonclustered(RentPayableBalanceID)
+--CONSTRAINT FK_LiabilitiesRentPayableBalance Foreign Key(LedgerLiabilitiesID)
+--REFERENCES [dbo].[LedgerLiabilityAccounts] ([LiabilityAccountID]))
+--CREATE TABLE LiabilitiesDividendsBalance(
+--DividendsBalanceID int,
+--LedgerLiabilitiesID int,
+--DividendsBalance int
+--Constraint PK_LiabilitiesDividendsBalance Primary Key nonclustered(DividendsBalanceID)
+--CONSTRAINT FK_LiabilitiesDividendsBalance Foreign Key(LedgerLiabilitiesID)
+--REFERENCES [dbo].[LedgerLiabilityAccounts] ([LiabilityAccountID]))
+--SELECT *
+--FROM LiabilitiesDividendsBalance
+--CREATE TABLE LiabilitiesDiscountOnBondsBalance(
+--DiscountOnBondsBalanceID int,
+--LedgerLiabilitiesID int,
+--DiscountOnBondsBalance int
+--Constraint PK_LiabilitiesDiscountOnBondsBalance Primary Key nonclustered(DiscountOnBondsBalanceID)
+--CONSTRAINT FK_LiabilitiesDiscountOnBondsBalance Foreign Key(LedgerLiabilitiesID)
+--REFERENCES [dbo].[LedgerLiabilityAccounts] ([LiabilityAccountID]))
+--SELECT *
+--FROM LiabilitiesDiscountOnBondsBalance
+--USE LedgerApplication
+--GO
+--CREATE TABLE OwnersWithdrawelBalance(
+--OwnersWithdrawelBalanceID int,
+--LedgerEquityID int,
+--OwnersWithdrawelBalance int
+--CONSTRAINT PK_EquityOwnersWithdrawelBalance Primary Key nonclustered(OwnersWithdrawelBalanceID)
+--CONSTRAINT FK_EquityOwnersWithdrawelBalance Foreign Key(LedgerEquityID)
+--REFERENCES [dbo].[LedgerEquityAccounts](LiabilityEquityID))
+--SELECT *
+--FROM OwnersWithdrawelBalance
+--CREATE TABLE CommonShareBalance(
+--CommonShareBalanceID int,
+--LedgerEquityID int,
+--CommonShareBalance int
+--CONSTRAINT PK_EquityCommonShareBalance Primary Key nonclustered(CommonShareBalanceID)
+--CONSTRAINT FK_EquityCommonShareBalance Foreign Key(LedgerEquityID)
+--REFERENCES [dbo].[LedgerEquityAccounts](LiabilityEquityID))
+--SELECT * 
+--FROM CommonShareBalance
+--CREATE TABLE PreferredShareBalance(
+--PreferredShareBalanceID int,
+--LedgerEquityID int,
+--CommonShareBalance int
+--CONSTRAINT PK_EquityPreferredShareBalance Primary Key nonclustered(PreferredShareBalanceID)
+--CONSTRAINT FK_EquityPreferredShareBalance Foreign Key(LedgerEquityID)
+--REFERENCES [dbo].[LedgerEquityAccounts](LiabilityEquityID))
+--SELECT * 
+--FROM PreferredShareBalance
+--CREATE TABLE RetainedEarningsBalance(
+--PreferredShareBalanceID int,
+--LedgerEquityID int,
+--CommonShareBalance int
+--CONSTRAINT PK_EquityPreferredShareBalance Primary Key nonclustered(PreferredShareBalanceID)
+--CONSTRAINT FK_EquityPreferredShareBalance Foreign Key(LedgerEquityID)
+--REFERENCES [dbo].[LedgerEquityAccounts](LiabilityEquityID))
+--SELECT * 
+--FROM PreferredShareBalance
+CREATE TABLE DividendsBalance(
+DividendsBalanceID int,
+LedgerEquityID int,
+DividendsBalance int
+CONSTRAINT PK_DividendsBalance Primary Key nonclustered(DividendsBalanceID)
+CONSTRAINT FK_DividendsBalance Foreign Key(LedgerEquityID)
+REFERENCES [dbo].[LedgerEquityAccounts](LiabilityEquityID))
+SELECT * 
+FROM DividendsBalance

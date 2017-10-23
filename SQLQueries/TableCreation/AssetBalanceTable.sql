@@ -1,0 +1,62 @@
+--USE LedgerApplication
+--GO
+--Create Table CashBalance(
+--CashBalanceID int,
+--AssetAccountID int,
+--CashBalance int
+--Constraint PK_CashBalanceID Primary key nonclustered (CashBalanceID)
+--Constraint FK_CashAssetAccountID Foreign Key(AssetAccountID)
+--References LedgerAssetAccounts(AssetAccountID));
+--SELECT *
+--FROM CashBalance
+
+--USE LedgerApplication
+--GO
+--Create Table TemporaryInvestmentBalance(
+--TemporaryInvestmentBalanceID int,
+--AssetAccountID int,
+--TemporaryInvestmentBalance int
+--Constraint PK_TemporaryInvestmentBalanceID Primary key nonclustered (TemporaryInvestmentBalanceID)
+--Constraint FK_TemporaryInvestmentBalanceAssetAccountID Foreign Key(AssetAccountID)
+--References LedgerAssetAccounts(AssetAccountID));
+--SELECT *
+--FROM TemporaryInvestmentBalance
+--Constraint PK_AssetAccountID Primary Key nonclustered (AssetAccountID)
+--CONSTRAINT FK_LedgerID Foreign Key (LedgerID)
+--References LedgerID(LedgerID));[AssetAccountID]
+
+--USE LedgerApplication
+--GO
+--Create Table InventoryBalance(
+--InventoryBalanceID int,
+--AssetAccountID int,
+--InventoryBalance int
+--Constraint PK_InventoryBalanceID Primary key nonclustered (InventoryBalanceID)
+--Constraint FK_InventoryBalanceAssetAccountID Foreign Key(AssetAccountID)
+--References LedgerAssetAccounts(AssetAccountID));
+--SELECT *
+--FROM InventoryBalance
+
+--USE LedgerApplication
+--GO
+--Create Table SuppliesBalance(
+--SuppliesBalanceID int,
+--AssetAccountID int,
+--SuppliesBalance int
+--Constraint PK_SuppliesBalanceID Primary key nonclustered (SuppliesBalanceID)
+--Constraint FK_SuppliesBalanceAssetAccountID Foreign Key(AssetAccountID)
+--References LedgerAssetAccounts(AssetAccountID));
+--SELECT *
+--FROM SuppliesBalance
+
+--USE LedgerApplication
+--GO
+--Create Table PropertyBalance(
+--PropertyBalanceID int,
+--AssetAccountID int,
+--PropertyBalance int
+--Constraint PK_PropertyBalanceID Primary key nonclustered (PropertyBalanceID)
+--Constraint FK_PropertyBalanceAssetAccountID Foreign Key(AssetAccountID)
+--References LedgerAssetAccounts(AssetAccountID));
+--SELECT *
+--FROM PropertyBalance
